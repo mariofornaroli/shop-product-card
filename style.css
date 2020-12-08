@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.8s;
+}
+
+.item-container {
+    position: relative;
+    background-color: #fff;
+    width: 600px;
+    min-height: 420px;
+    box-shadow: 10px 10px 40px 0 rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    padding: 24px;
+
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+    opacity: 0;
+}
+
+/* Color Change --> show the respective image */
+
+body.yellow .img-container img:nth-child(1) {
+    opacity: 1;
+}
+body.blue .img-container img:nth-child(2) {
+    opacity: 1;
+}
+body.green .img-container img:nth-child(3) {
+    opacity: 1;
+}
+body.red .img-container img:nth-child(4) {
+    opacity: 1;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colors {
+    margin: 24px;
+}
+
+.colors button {
+    width: 18px;
+    height: 18px;
+    outline: none;
+    border-radius: 50%;
+    color: transparent;
+    border: 4px solid #fff;
+    margin: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px;
+    transition: color 0.4s;
+}
+
+#yellow {
+    background-color: #fdb707;
+}
+#blue {
+    background-color: #2a385a;
+}
+#green {
+    background-color: #429a91;
+}
+#red {
+    background-color: #fb3f40;
+}
+
+.name {
+    color: #333;
+    font-size: 1.7em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.description {
+    color: #777;
+    text-align: justify;
+    line-height: 22px;
+    margin-bottom: 40px;
+}
+
+.cart {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.action {
+    outline: none;
+    border: 2px solid;
+    background: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.4s, transform 0.4s;
+}
+
+button.action:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+
+/* Color changes  -->  item color change */
+body.yellow #yellow,
+body.yellow .price,
+body.yellow .action {
+    color: #fdb707;
+}
+body.blue #blue,
+body.blue .price,
+body.blue .action {
+    color: #2a385a;
+}
+body.green #green,
+body.green .price,
+body.green .action {
+    color: #429a91;
+}
+body.red #red,
+body.red .price,
+body.red .action {
+    color: #fb3f40;
+}
+
+/* Color changes  --> background-color changes */
+body.yellow  {
+    background-color: #fdb707;
+}
+body.blue  {
+    background-color: #2a385a;
+}
+body.green  {
+    background-color: #429a91;
+}
+body.red {
+    background-color: #fb3f40;
+}

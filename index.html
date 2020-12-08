@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Shop Product Card</title>
+</head>
+<body class="red">
+    <div class="item-container">
+        <div class="img-container">
+            <img src="./images/img1.jpg" alt="Product image">
+            <img src="./images/img2.jpg" alt="Product image">
+            <img src="./images/img3.jpg" alt="Product image">
+            <img src="./images/img4.jpg" alt="Product image">
+        </div>
+
+        <div class="info">
+            <div class="colors">
+                <button id="yellow"></button>
+                <button id="blue"></button>
+                <button id="green"></button>
+                <button id="red"></button>
+            </div>
+            <p class="name">Adidas Originals</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores laudantium sapiente asperiores sint magnam, expedita nihil rem explicabo et sunt.</p>
+            <div class="cart">
+                <p class="price">24 $</p>
+                <button class="action">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const colorButtons = document.querySelectorAll('.colors button');
+        colorButtons.forEach(item => {
+            item.addEventListener('click', function() {
+                const colorSelectedId = this.id;
+                document.body.className = colorSelectedId;
+            })
+        })
+
+    </script>
+    
+</body>
+</html>
